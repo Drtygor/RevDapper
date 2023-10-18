@@ -1,18 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import {Svg, Ellipse} from 'react-native-svg';
 
-
-const LoadingPage = () => {
+const HomePage = () => {
     return (
              <View style={styles.container}>
       <Text style={styles.brand}>Dapper</Text>
-      <Image source={require('./assets/blazer.png')} style={styles.image} />
-
-      <Text style={styles.loading}>Loading ...</Text>
       <StatusBar style="auto" />
     </View>
     )
 }
+
+
 
 
 const styles = StyleSheet.create({
@@ -26,7 +25,7 @@ const styles = StyleSheet.create({
 
   brand: {
     position: 'absolute',
-    top: '20%',
+    top: '10%',
     fontWeight: 'bold',
     fontSize: 40,
     color: 'black',
@@ -53,4 +52,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default LoadingPage;
+export default HomePage;

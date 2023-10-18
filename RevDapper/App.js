@@ -1,20 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
-
-
-
+import LoadingPage from './loadingPage';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.brand}>Dapper</Text>
-      <Image source={require('./assets/blazer.png')} style={styles.image} />
-
-      <Text style={styles.loading}>Loading ...</Text>
-      <StatusBar style="auto" />
+    <LoadingPage />
+    
     </View>
   );
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -24,33 +21,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     
   },
-
-  brand: {
-    position: 'absolute',
-    top: '20%',
-    fontWeight: 'bold',
-    fontSize: 40,
-    color: 'black',
-    letterSpacing: 5,
-    fontFamily: 'sans-serif-medium',
-
-  },
-
-  loading: {
-    position: 'absolute',
-    top: '75%',
-    right: '15%',
-    fontWeight: 'bold',
-    fontSize: 40,
-    color: 'black',
-    letterSpacing: 5, 
-    fontFamily: 'sans-serif-medium',
-  },
-
-  image: {
-    position: 'absolute',
-    top: '32%',
-    width: 270,
-    height: 270,
-  }
 });
