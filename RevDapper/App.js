@@ -1,22 +1,31 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Image, Text, TextInput, View } from 'react-native';
+import logo from './assets/Dapper.png'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View
-        style={{marginLeft: 4,
-        }}>
+      
         <Image 
-          source={{uri: ''}}
-          style={{width: 200, height: 200}}
+            source={logo}
+            
+            style={{width: "100%", height: "10.3%"}}
 
-        />
-        
+          />
+
+      
+      <View
+      style = {{paddingTop: "70%",
+        paddingLeft: 15,
+        paddingRight: 15,}}>
+          <View
+        style={{marginLeft: 4,
+          
+        }}>
+       
         <Text>Username</Text>
       </View>
-
-      <TextInput
+        <TextInput
         style={{height: 40,
           width: '100%',
           borderColor: 'gray',
@@ -26,7 +35,7 @@ export default function App() {
         
       />
 
-      <View
+<View
         style={{marginLeft: 4}}>
         <Text>Password</Text>
       </View>
@@ -38,15 +47,23 @@ export default function App() {
           borderRadius:10,
           borderWidth: 1,}}
         
-        
       />
-
-        
-      <Button
+    <View 
+    style = {{marginTop : 20}}>
+    <Button
         title="Login"
         color="black"
-        
         />
+    </View>
+
+    
+      </View>
+      
+
+      
+
+        
+      
      
       
 
@@ -62,11 +79,10 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    paddingLeft: 15,
-    paddingRight: 15,
+    
     flex: 1,
     backgroundColor: '#fff',
     //alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'top'
   },
 });
