@@ -2,6 +2,10 @@
 
 # dependencies
 node_modules/
+<<<<<<< Updated upstream:RevDapper/.gitignore
+=======
+.DS_Store
+>>>>>>> Stashed changes:.gitignore
 
 # Expo
 .expo/
