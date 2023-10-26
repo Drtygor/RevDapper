@@ -10,7 +10,15 @@ const Stack = createNativeStackNavigator();
 
 
 export default function App() {
+  //list of url
+  const data = [
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F61%2F70%2F61708115ff10932bd9bb771f3110089435ac345e.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_tshirtstanks_shortsleeve%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main",
+  
+  
+  ]
+  
   return (
+<<<<<<< Updated upstream
     <NavigationContainer>
       <Stack.Navigator>
 
@@ -34,3 +42,15 @@ const styles = StyleSheet.create({
     
   },
 });
+=======
+    
+
+    <View>
+      // text: recently uploaded
+      // scrollview
+      <image></image> // find out how to render url to image
+      // dynamically render all images
+    </View>
+  );
+}
+>>>>>>> Stashed changes
