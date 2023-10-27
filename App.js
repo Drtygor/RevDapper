@@ -1,5 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native'
+import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import LoginPage from './loginPage'
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
@@ -11,7 +16,6 @@ export default function App() {
       >
 
     <Stack.Screen name="Login" component={LoginPage} />    
-    <Stack.Screen name="HomePage" component={HomePage} />
 
 
     </Stack.Navigator>
