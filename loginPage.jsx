@@ -3,7 +3,10 @@ import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import Logo from './assets/FinalDapperLogo.png';
 import Icon from 'react-native-vector-icons/AntDesign'
 
-export const LoginPage = () => {
+
+
+
+export const LoginPage = ({navigation}) => {
   return (
     //The View for the entire page
     <View style={{ 
@@ -22,6 +25,8 @@ export const LoginPage = () => {
       <View style={styles.signup}>
       {/* Buttons */}
       <TouchableOpacity
+      onPress={() => navigation.navigate('Login Screen')}
+
         style={{
           backgroundColor: 'white',
           padding: 20,
@@ -29,7 +34,8 @@ export const LoginPage = () => {
           marginTop: 70,
           width: "70%",
           borderWidth: 2,
-          borderColor: 'white'
+          borderColor: 'white',
+          
         }}
       >
         <Text style={{ 
@@ -40,6 +46,7 @@ export const LoginPage = () => {
       </TouchableOpacity>
 
       <TouchableOpacity
+      onPress={() => navigation.navigate('Sign Up Screen')}
         style={{
           backgroundColor: 'white',
           padding: 20,
@@ -60,14 +67,17 @@ export const LoginPage = () => {
       <View style={styles.appSignUp}>
 
 
-        <Icon name={"apple1"} size={60} color={"white"} />
+        <Icon name={"apple1"} size={60} color={"white"}
+        onPress={() => navigation.navigate('Sign Up Screen')} />
 
 
 
-        <Icon name={"google"} size={60} color={"white"} />
+        <Icon name={"google"} size={60} color={"white"}
+        onPress={() => navigation.navigate('Sign Up Screen')} />
 
 
-        <Icon name={"instagram"} size={60} color={"white"} />
+        <Icon name={"instagram"} size={60} color={"white"}
+        onPress={() => navigation.navigate('Sign Up Screen')} />
 
 
 
