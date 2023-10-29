@@ -3,23 +3,31 @@ import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import Logo from './assets/FinalDapperLogo.png';
 import Icon from 'react-native-vector-icons/AntDesign'
 
+<<<<<<< Updated upstream
 export const LoginPage = () => {
+=======
+
+
+
+export const LoginPage = ({ navigation }) => {
+>>>>>>> Stashed changes
   return (
     //The View for the entire page
-    <View style={{ 
-      flex: 1, 
+    <View style={{
+      flex: 1,
       justifyContent: 'flex-start', // Center the content vertically
       flexDirection: 'column'
     }}>
       {/*The View for the logo*/}
       <View style={styles.logo}>
-      <Image
-        source={Logo}
-        style={{ width: "100%", height: 100, paddingVertical: 150}} // Set the dimensions as needed
-      />
+        <Image
+          source={Logo}
+          style={{ width: "100%", height: 100, paddingVertical: 150 }} // Set the dimensions as needed
+        />
       </View>
       {/*The View for the button sign ups*/}
       <View style={styles.signup}>
+<<<<<<< Updated upstream
       {/* Buttons */}
       <TouchableOpacity
         style={{
@@ -36,9 +44,31 @@ export const LoginPage = () => {
           color: 'black',
           textAlign: 'center', 
           fontSize: 20
-          }}>Login</Text>
-      </TouchableOpacity>
+=======
+        {/* Buttons */}
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Login Screen')}
 
+          style={{
+            backgroundColor: 'white',
+            padding: 20,
+            borderRadius: 5,
+            marginTop: 70,
+            width: "70%",
+            borderWidth: 2,
+            borderColor: 'white',
+
+          }}
+        >
+          <Text style={{
+            color: 'black',
+            textAlign: 'center',
+            fontSize: 20
+>>>>>>> Stashed changes
+          }}>Login</Text>
+        </TouchableOpacity>
+
+<<<<<<< Updated upstream
       <TouchableOpacity
         style={{
           backgroundColor: 'white',
@@ -52,14 +82,31 @@ export const LoginPage = () => {
           color: 'black',
           textAlign: 'center', 
           fontSize: 20
+=======
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Sign Up Screen')}
+          style={{
+            backgroundColor: 'white',
+            padding: 20,
+            borderRadius: 5,
+            marginTop: 20, // Adjust the margin between 
+            width: "70%"
+          }}
+        >
+          <Text style={{
+            color: 'black',
+            textAlign: 'center',
+            fontSize: 20
+>>>>>>> Stashed changes
           }}>Sign up</Text>
-      </TouchableOpacity>
+        </TouchableOpacity>
       </View>
       {/*Icon View*/}
-      
+
       <View style={styles.appSignUp}>
 
 
+<<<<<<< Updated upstream
         <Icon name={"apple1"} size={60} color={"white"} />
 
 
@@ -68,10 +115,23 @@ export const LoginPage = () => {
 
 
         <Icon name={"instagram"} size={60} color={"white"} />
+=======
+        <Icon name={"apple1"} size={60} color={"white"}
+          onPress={() => navigation.navigate('Sign Up Screen')} />
 
 
 
-        </View>
+        <Icon name={"google"} size={60} color={"white"}
+          onPress={() => navigation.navigate('Sign Up Screen')} />
+
+
+        <Icon name={"instagram"} size={60} color={"white"}
+          onPress={() => navigation.navigate('Sign Up Screen')} />
+>>>>>>> Stashed changes
+
+
+
+      </View>
 
 
 
@@ -92,21 +152,21 @@ const styles = StyleSheet.create({
 
   signup: {
     flexDirection: 'column',
-      flex: 3,
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingVertical: 50,
-        paddingHorizontal: 32,
-        borderRadius: 4,
-        elevation: 3,
-        backgroundColor: 'black',
+    flex: 3,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 50,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'black',
 
   },
 
   logo: {
     flexDirection: 'column',
     flex: 3,
-  
+
   },
 
   appSignUp: {
