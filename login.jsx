@@ -51,7 +51,7 @@ export const LoginScreen = ({ navigation }) => {
         </TextInput>
 
         <TouchableOpacity
-          //onPress={() => navigation.navigate('Sign Up Screen')}
+          onPress={() => navigation.navigate('Home')}
           style={{
             backgroundColor: 'white',
             padding: 20,

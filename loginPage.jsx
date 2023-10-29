@@ -3,14 +3,10 @@ import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import Logo from './assets/FinalDapperLogo.png';
 import Icon from 'react-native-vector-icons/AntDesign'
 
-<<<<<<< Updated upstream
-export const LoginPage = () => {
-=======
 
 
 
 export const LoginPage = ({ navigation }) => {
->>>>>>> Stashed changes
   return (
     //The View for the entire page
     <View style={{
@@ -27,24 +23,6 @@ export const LoginPage = ({ navigation }) => {
       </View>
       {/*The View for the button sign ups*/}
       <View style={styles.signup}>
-<<<<<<< Updated upstream
-      {/* Buttons */}
-      <TouchableOpacity
-        style={{
-          backgroundColor: 'white',
-          padding: 20,
-          borderRadius: 5,
-          marginTop: 70,
-          width: "70%",
-          borderWidth: 2,
-          borderColor: 'white'
-        }}
-      >
-        <Text style={{ 
-          color: 'black',
-          textAlign: 'center', 
-          fontSize: 20
-=======
         {/* Buttons */}
         <TouchableOpacity
           onPress={() => navigation.navigate('Login Screen')}
@@ -64,25 +42,9 @@ export const LoginPage = ({ navigation }) => {
             color: 'black',
             textAlign: 'center',
             fontSize: 20
->>>>>>> Stashed changes
           }}>Login</Text>
         </TouchableOpacity>
 
-<<<<<<< Updated upstream
-      <TouchableOpacity
-        style={{
-          backgroundColor: 'white',
-          padding: 20,
-          borderRadius: 5,
-          marginTop: 20, // Adjust the margin between 
-          width: "70%"
-        }}
-      >
-        <Text style={{ 
-          color: 'black',
-          textAlign: 'center', 
-          fontSize: 20
-=======
         <TouchableOpacity
           onPress={() => navigation.navigate('Sign Up Screen')}
           style={{
@@ -97,7 +59,6 @@ export const LoginPage = ({ navigation }) => {
             color: 'black',
             textAlign: 'center',
             fontSize: 20
->>>>>>> Stashed changes
           }}>Sign up</Text>
         </TouchableOpacity>
       </View>
@@ -106,16 +67,6 @@ export const LoginPage = ({ navigation }) => {
       <View style={styles.appSignUp}>
 
 
-<<<<<<< Updated upstream
-        <Icon name={"apple1"} size={60} color={"white"} />
-
-
-
-        <Icon name={"google"} size={60} color={"white"} />
-
-
-        <Icon name={"instagram"} size={60} color={"white"} />
-=======
         <Icon name={"apple1"} size={60} color={"white"}
           onPress={() => navigation.navigate('Sign Up Screen')} />
 
@@ -127,7 +78,6 @@ export const LoginPage = ({ navigation }) => {
 
         <Icon name={"instagram"} size={60} color={"white"}
           onPress={() => navigation.navigate('Sign Up Screen')} />
->>>>>>> Stashed changes
 
 
 
