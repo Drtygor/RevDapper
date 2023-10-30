@@ -25,6 +25,7 @@ export const SignUpScreen = ({ navigation }) => {
       </View>
 
       <View style={styles.email}>
+
         <TextInput style={{
           color: 'black',
           textAlign: 'center',
