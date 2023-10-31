@@ -53,7 +53,6 @@ export default function CameraPage() {
     }
 
     if (photo) {
-        console.log(photo.uri)
 
         return (
 
