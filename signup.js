@@ -14,6 +14,7 @@ export const SignUpScreen = ({ navigation }) => {
   return (
 
     <View style={styles.container}>
+      <StatusBar style="light" />
       <Icon name={"arrowleft"} size={60} color={"white"}
         onPress={() => navigation.navigate('Login')} />
 

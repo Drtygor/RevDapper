@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import Logo from './assets/FinalDapperLogo.png';
 import Icon from 'react-native-vector-icons/AntDesign'
+import { StatusBar } from 'expo-status-bar';
 
 
 
@@ -14,6 +15,7 @@ export const LoginPage = ({ navigation }) => {
       justifyContent: 'flex-start', // Center the content vertically
       flexDirection: 'column'
     }}>
+      <StatusBar style="light" />
       {/*The View for the logo*/}
       <View style={styles.logo}>
         <Image

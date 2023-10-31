@@ -85,6 +85,7 @@ const appStyles = StyleSheet.create({
 const RecentlyUploaded = () => {
   return (
     <View style={styles.appContainer}>
+      <StatusBar style="light" />
       <MyFlatList />
     </View>
 
