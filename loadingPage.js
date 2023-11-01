@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     color: 'black',
     letterSpacing: 5,
-    fontFamily: 'sans-serif-medium',
+    
 
   },
 
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     color: 'black',
     letterSpacing: 5, 
-    fontFamily: 'sans-serif-medium',
+    
   },
 
   image: {

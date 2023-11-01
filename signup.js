@@ -36,8 +36,8 @@ export const SignUpScreen = ({ navigation }) => {
           padding: 20,
           borderRadius: 5,
           marginTop: 20,
-        }}> Enter Your Email
-        </TextInput>
+          }}
+          placeholder='Enter Your Email'/> 
 
 
         <TextInput style={{
@@ -49,8 +49,8 @@ export const SignUpScreen = ({ navigation }) => {
           padding: 20,
           borderRadius: 5,
           marginTop: 20,
-        }}> Enter Your Password
-        </TextInput>
+        }} placeholder='Enter Password' />
+        
 
 
         <TextInput style={{
@@ -62,8 +62,8 @@ export const SignUpScreen = ({ navigation }) => {
           padding: 20,
           borderRadius: 5,
           marginTop: 20,
-        }}> Confirm Your Password
-        </TextInput>
+        }} placeholder='Confirm Your Password'/>
+      
 
         <TouchableOpacity
           onPress={() => navigation.navigate('Home')}

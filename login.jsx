@@ -35,8 +35,8 @@ export const LoginScreen = ({ navigation }) => {
           padding: 20,
           borderRadius: 5,
           marginTop: 20,
-        }}> Enter Your Email
-        </TextInput>
+        }} placeholder='Enter Your Email'/>
+        
 
 
         <TextInput style={{
@@ -48,8 +48,8 @@ export const LoginScreen = ({ navigation }) => {
           padding: 20,
           borderRadius: 5,
           marginTop: 20,
-        }}> Enter Your Password
-        </TextInput>
+        }} placeholder='Enter Your Password' />
+        
 
         <TouchableOpacity
           onPress={() => navigation.navigate('Home')}
