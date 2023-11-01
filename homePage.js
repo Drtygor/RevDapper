@@ -1,106 +1,47 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
-import {Svg, Ellipse} from 'react-native-svg';
-import logo from './assets/BetterDapper.png'
+import { StyleSheet, Text, View, Image } from 'react-native';
+import LoadingPage from './loadingPage';
+import LoginPage from './loginPage';
+import { CommonActions } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import RecentlyUploaded from './RecentlyUploaded';
+import CameraPage from './CameraPage';
+import Profile from './Profile';
+import Icon from 'react-native-vector-icons/AntDesign';
+
+const Tab = createBottomTabNavigator();
+
+const RecentlyUploadedIcon = <Icon name="upload" size={30} color="#000000" />;
+const CameraIcon = <Icon name="camera" size={30} color="#000000" />;
+const ProfileIcon = <Icon name="profile" size={30} color="#000000" />;
 
 
+export default function Home({ navigation }) {
 
-const HomePage = () => {
-    return (
-             <View style={styles.container}>
-       <Image 
-            source={logo}
-            
-            style={{width: "100%", height: "21.3%"}}
-          />
+  return (
 
-      
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false
+      }}>
+      <Tab.Screen name="RecentlyUploaded" component={RecentlyUploaded} options={{ tabBarIcon: () => RecentlyUploadedIcon }} />
+      <Tab.Screen name="Camera" component={CameraPage} options={{ tabBarIcon: () => CameraIcon }} />
+      <Tab.Screen name="Profile" component={Profile} options={{ tabBarIcon: () => ProfileIcon }} />
+    </Tab.Navigator>
 
-     
 
-      <View
-      style = {{paddingTop: "10%",
-        paddingLeft: 15,
-        paddingRight: 15,
-        alignContent: 'center',
-        
-        }}>
-          <View
-        style={{marginLeft: 4,
-        }}>
-       
-        <Text style={styles.slogan}> Generate Your Dream WardrobeS! </Text>
-      </View>
-  
-
-      </View>
-
-      <View style = {{marginTop : 40}}>
-    <Button 
-        // onPress={() => navigation.navigate('HomePage')}
-        title="Scan Here"
-        color="black"
-        />
-    </View>
-    <View style = {{marginTop : 50}}>
-    <Button
-
-        title="Upload Here"
-        color="black"/>
-
-  
-    </View>
-    <View style = {{marginTop : 70,
-    justifyContent : "flex-end",}}>
-
-    <Button
-
-        title="Open Your Wardrobe"
-        color="black"/>
-    </View>
-    </View>
-
-   
-    )
+  );
 }
-
 
 
 
 const styles = StyleSheet.create({
   container: {
-    
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'gray',
     alignItems: 'center',
-    justifyContent: 'top'
-  },
-
-  brand: {
-    position: 'absolute',
-    top: '10%',
-    fontWeight: 'bold',
-    fontSize: 80,
-    color: 'black',
-    letterSpacing: 5,
-    fontFamily: 'sans-serif-medium',
+    justifyContent: 'center',
 
   },
-
-  slogan: {
-    fontWeight: 'bold',
-    fontSize: 35,
-    color: 'black', 
-    fontFamily: 'sans-serif-medium',
-    alignContent: 'flex-start',
-  },
-
-  image: {
-    position: 'absolute',
-    top: '32%',
-    width: 270,
-    height: 270,
-  }
 });
-
-export default HomePage;
