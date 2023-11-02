@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import profile from './assets/blank-profile-picture-973460_1280.png'
+import Logo from './assets/FinalDapperLogo.png'
 
 const handleLogout = (navigation) => {
     navigation.navigate('Login');
@@ -10,6 +11,14 @@ const Profile = ({navigation}) => {
     return (
         <View style={styles.container}>
             <StatusBar style="dark" />
+
+             {/*The Dapper Logo */}
+             <View style = {styles.logoStyle}>
+                <Image
+                source = {Logo}
+                style = {styles.logoImage}
+                />
+            </View>
 
             {/*The profile icon */}
             <View style = {styles.profile}>
@@ -21,21 +30,28 @@ const Profile = ({navigation}) => {
 
             {/*The Dummy Username */}
             <View style = {styles.usernameContainer}>
-                <Text style = {styles.username}>Username</Text>
+                <Text style = {styles.textFormat}>Username</Text>
             </View>
 
             {/*Logout Button*/}
             <TouchableOpacity 
             style = {styles.settingButtons}
             onPress = {() => handleLogout(navigation)}>
-                <Text style = {styles.username}>Logout</Text>
+                <Text style = {styles.textFormat}>Logout</Text>
             </TouchableOpacity>
 
-            {/*Settings*/}
+            {/*Settings Page Button*/}
             <TouchableOpacity
             style = {styles.settingButtons}
             >
-                <Text style = {styles.username}>Settings</Text>
+                <Text style = {styles.textFormat}>Settings</Text>
+            </TouchableOpacity>
+
+             {/*About Page Button*/}
+             <TouchableOpacity
+            style = {styles.settingButtons}
+            >
+                <Text style = {styles.textFormat}>About</Text>
             </TouchableOpacity>
 
         </View>
@@ -52,11 +68,21 @@ const styles = StyleSheet.create({
         backgroundColor : 'black'
     },
 
+    logoStyle : {
+       alignItems : 'center',
+       justifyContent : 'center'
+    },
+
+    logoImage : {
+        width : 150,
+        height : 150
+    },
+
     profile : {
         flexDirection : 'column',
         flex : 1,
         alignItems: 'center',
-        marginTop : '40%'
+
     },
 
     profileImage : {
@@ -71,11 +97,11 @@ const styles = StyleSheet.create({
         justifyContent : 'center',
         padding : 10,
         width : '50%',
-        marginBottom : "35%",
+        marginBottom : "20%",
         flexDirection : 'column'
     },
 
-    username : {
+    textFormat : {
         fontSize : 25,
         textAlign : 'center',
         fontWeight : 'normal',
@@ -88,7 +114,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         width: "50%",
         flexDirection : 'column',
-        marginBottom : '10%',
+        marginBottom : 30,
     }
 
 });

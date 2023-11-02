@@ -25,7 +25,7 @@ export default function Home({ navigation }) {
       screenOptions={{
         headerShown: false
       }}>
-      <Tab.Screen name="RecentlyUploaded" component={RecentlyUploaded} options={{ tabBarIcon: () => RecentlyUploadedIcon }} />
+      <Tab.Screen name="Recently Uploaded" component={RecentlyUploaded} options={{ tabBarIcon: () => RecentlyUploadedIcon }} />
       <Tab.Screen name="Camera" component={CameraPage} options={{ tabBarIcon: () => CameraIcon }} />
       <Tab.Screen name="Profile" component={Profile} options={{ tabBarIcon: () => ProfileIcon }} />
     </Tab.Navigator>
