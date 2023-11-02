@@ -7,14 +7,16 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { StatusBar } from 'expo-status-bar';
-
+import * as MediaLibrary from 'expo-media-library';
+import * as ImagePicker from 'expo-image-picker';
 const cameraButtonSize = 90
 
 export default function CameraPage() {
 
 
 
-    const [permission, requestPermission] = Camera.useCameraPermissions();
+    const [cameraPermission, requestCameraPermission] = Camera.useCameraPermissions();
+    const [mediaPickerPermission, requestMediaPickerPermission] = ImagePicker.useMediaLibraryPermissions()
     let cameraRef = useRef();
     const isFocused = useIsFocused();
     const [photo, setPhoto] = useState();
@@ -32,9 +34,10 @@ export default function CameraPage() {
 
         setPhoto(newPhoto);
 
+
     };
 
-    if (!permission) {
+    if (!cameraPermission) {
 
         return (
             <View style={styles.container}>
@@ -43,8 +46,7 @@ export default function CameraPage() {
         );
     }
 
-    if (!permission.granted) {
-        requestPermission()
+    if (!mediaPickerPermission) {
         return (
             <View style={styles.container}>
                 <LoadingPage />
@@ -52,6 +54,40 @@ export default function CameraPage() {
         );
     }
 
+    if (!mediaPickerPermission.granted) {
+        requestMediaPickerPermission()
+        return (
+            <View style={styles.container}>
+                <LoadingPage />
+            </View>
+        );
+    }
+
+    if (!cameraPermission.granted) {
+        requestCameraPermission()
+        return (
+            <View style={styles.container}>
+                <LoadingPage />
+            </View>
+        );
+    }
+
+
+    const pickImage = async () => {
+        let result = await ImagePicker.launchImageLibraryAsync({
+            mediaTypes: ImagePicker.MediaTypeOptions.Images,
+            allowsEditing: false,
+            aspect: [16, 9],
+            quality: 1,
+        });
+
+
+
+        if (!result.canceled) {
+
+            setPhoto(result.assets[0]);
+        }
+    };
     if (photo) {
 
         return (
@@ -100,7 +136,7 @@ export default function CameraPage() {
                 <View style={styles.bottomRow}>
 
 
-                    <TouchableOpacity style={{ marginBottom: "auto", alignSelf: "flex-start" }}>
+                    <TouchableOpacity style={{ marginBottom: "auto", alignSelf: "flex-start" }} onPress={pickImage}>
                         <AntDesign name="picture" size={60} color="white" />
                     </TouchableOpacity>
 
