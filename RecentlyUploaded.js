@@ -47,6 +47,7 @@ const MyFlatList = () => {
 
   return (
     <View style={appStyles.container}>
+      <StatusBar style="light" hidden={false} />
       <Text style={appStyles.recentlyUploadedText}>Recently Uploaded</Text>
       <FlatList
         data={recentImages}
@@ -72,7 +73,7 @@ const appStyles = StyleSheet.create({
     paddingTop: 40,
     paddingBottom: 10,
     color: 'white',
-    backgroundColor: 'black',
+
     padding: 10
   },
   image: {
@@ -85,7 +86,6 @@ const appStyles = StyleSheet.create({
 const RecentlyUploaded = () => {
   return (
     <View style={styles.appContainer}>
-      <StatusBar style="light" />
       <MyFlatList />
     </View>
 

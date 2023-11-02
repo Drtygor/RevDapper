@@ -93,7 +93,7 @@ export default function CameraPage() {
         return (
 
             <View style={{ flex: 1, backgroundColor: "black" }}>
-                <StatusBar hidden />
+                <StatusBar hidden={true} />
                 <ImageBackground resizeMode="contain"
                     source={{ uri: photo.uri }}
                     style={styles.image}>
@@ -131,7 +131,7 @@ export default function CameraPage() {
 
     return (
         <View style={styles.container}>
-            <StatusBar hidden />
+            {isFocused && <StatusBar hidden={true} />}
             {isFocused && <Camera style={styles.camera} type={CameraType.back} ratio={'16:9'} ref={cameraRef}>
                 <View style={styles.bottomRow}>
 

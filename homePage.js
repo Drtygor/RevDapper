@@ -22,8 +22,9 @@ export default function Home({ navigation }) {
   return (
 
     <Tab.Navigator
+      backBehavior="history"
       screenOptions={{
-        headerShown: false
+        headerShown: false,
       }}>
       <Tab.Screen name="RecentlyUploaded" component={RecentlyUploaded} options={{ tabBarIcon: () => RecentlyUploadedIcon }} />
       <Tab.Screen name="Camera" component={CameraPage} options={{ tabBarIcon: () => CameraIcon }} />
