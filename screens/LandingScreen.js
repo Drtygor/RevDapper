@@ -1,17 +1,19 @@
-import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import Logo from '../assets/FinalDapperLogo.png';
-import Icon from 'react-native-vector-icons/AntDesign'
-import { StatusBar } from 'expo-status-bar';
+import React from "react";
+import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
+import Logo from "../assets/FinalDapperLogo.png";
+import Icon from "react-native-vector-icons/AntDesign";
+import { StatusBar } from "expo-status-bar";
 
 export const LandingScreen = ({ navigation }) => {
   return (
     //The View for the entire page
-    <View style={{
-      flex: 1,
-      justifyContent: 'flex-start', // Center the content vertically
-      flexDirection: 'column'
-    }}>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "flex-start", // Center the content vertically
+        flexDirection: "column",
+      }}
+    >
       <StatusBar style="light" />
       {/*The View for the logo*/}
       <View style={styles.logo}>
@@ -24,48 +26,68 @@ export const LandingScreen = ({ navigation }) => {
       <View style={styles.signup}>
         {/* Buttons */}
         <TouchableOpacity
-          onPress={() => navigation.navigate('Login')}
+          onPress={() => navigation.navigate("Login")}
           style={{
-            backgroundColor: 'white',
+            backgroundColor: "white",
             padding: 20,
             borderRadius: 5,
             marginTop: 70,
             width: "70%",
             borderWidth: 2,
-            borderColor: 'white',
+            borderColor: "white",
           }}
         >
-          <Text style={{
-            color: 'black',
-            textAlign: 'center',
-            fontSize: 20
-          }}>Login</Text>
+          <Text
+            style={{
+              color: "black",
+              textAlign: "center",
+              fontSize: 20,
+            }}
+          >
+            Login
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Signup')}
+          onPress={() => navigation.navigate("Signup")}
           style={{
-            backgroundColor: 'white',
+            backgroundColor: "white",
             padding: 20,
             borderRadius: 5,
-            marginTop: 20, // Adjust the margin between 
-            width: "70%"
+            marginTop: 20, // Adjust the margin between
+            width: "70%",
           }}
         >
-          <Text style={{
-            color: 'black',
-            textAlign: 'center',
-            fontSize: 20
-          }}>Sign up</Text>
+          <Text
+            style={{
+              color: "black",
+              textAlign: "center",
+              fontSize: 20,
+            }}
+          >
+            Sign up
+          </Text>
         </TouchableOpacity>
       </View>
       {/*Icon View*/}
       <View style={styles.appSignUp}>
-        <Icon name={"apple1"} size={60} color={"white"}
-          onPress={() => navigation.navigate('Signup')} />
-        <Icon name={"google"} size={60} color={"white"}
-          onPress={() => navigation.navigate('Signup')} />
-        <Icon name={"instagram"} size={60} color={"white"}
-          onPress={() => navigation.navigate('Signup')} />
+        <Icon
+          name={"apple1"}
+          size={60}
+          color={"white"}
+          onPress={() => navigation.navigate("Signup")}
+        />
+        <Icon
+          name={"google"}
+          size={60}
+          color={"white"}
+          onPress={() => navigation.navigate("Signup")}
+        />
+        <Icon
+          name={"instagram"}
+          size={60}
+          color={"white"}
+          onPress={() => navigation.navigate("Signup")}
+        />
       </View>
     </View>
   );
@@ -79,31 +101,30 @@ const styles = StyleSheet.create({
   },
 
   signup: {
-    flexDirection: 'column',
+    flexDirection: "column",
     flex: 3,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     paddingVertical: 50,
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: 'black',
-
+    backgroundColor: "black",
   },
 
   logo: {
-    flexDirection: 'column',
+    flexDirection: "column",
     flex: 3,
   },
 
   appSignUp: {
-    flexDirection: 'row',
+    flexDirection: "row",
     flex: 2,
-    backgroundColor: 'black',
-    justifyContent: 'space-between',
+    backgroundColor: "black",
+    justifyContent: "space-between",
     paddingHorizontal: 60,
-    paddingVertical: 0
-  }
+    paddingVertical: 0,
+  },
 });
 
 export default LandingScreen;

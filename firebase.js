@@ -2,7 +2,7 @@
 // import { getAuth } from 'firebase/auth';
 
 // const firebaseConfig = {
-    // configs from firebase
+// configs from firebase
 // };
 
 // const app = initializeApp(firebaseConfig);

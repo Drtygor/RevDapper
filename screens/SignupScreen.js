@@ -1,9 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, Image, TextInput, TouchableOpacity } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import Icon from 'react-native-vector-icons/AntDesign'
-import Logo from '../assets/FinalDapperLogo.png';
+import { StatusBar } from "expo-status-bar";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Icon from "react-native-vector-icons/AntDesign";
+import Logo from "../assets/FinalDapperLogo.png";
 
 // import { createUserWithEmailAndPassword } from "firebase/auth";
 // import { auth } from '../../firebase';
@@ -12,8 +20,12 @@ export const SignupScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <StatusBar style="light" />
-      <Icon name={"arrowleft"} size={60} color={"white"}
-        onPress={() => navigation.navigate('Login')} />
+      <Icon
+        name={"arrowleft"}
+        size={60}
+        color={"white"}
+        onPress={() => navigation.navigate("Login")}
+      />
       <View style={styles.logo}>
         <Image
           source={Logo}
@@ -21,61 +33,64 @@ export const SignupScreen = ({ navigation }) => {
         />
       </View>
       <View style={styles.email}>
-        <TextInput 
+        <TextInput
           style={{
-            color: 'black',
-            textAlign: 'center',
+            color: "black",
+            textAlign: "center",
             fontSize: 20,
             backgroundColor: "white",
             width: "80%",
             padding: 20,
             borderRadius: 5,
             marginTop: 20,
-            }}
-            placeholder='Enter Your Email'
-          /> 
-        <TextInput 
-          style={{
-            color: 'black',
-            textAlign: 'center',
-            fontSize: 20,
-            backgroundColor: "white",
-            width: "80%",
-            padding: 20,
-            borderRadius: 5,
-            marginTop: 20,
-          }} 
-          placeholder='Enter Password' 
+          }}
+          placeholder="Enter Your Email"
         />
-        <TextInput 
+        <TextInput
           style={{
-            color: 'black',
-            textAlign: 'center',
+            color: "black",
+            textAlign: "center",
             fontSize: 20,
             backgroundColor: "white",
             width: "80%",
             padding: 20,
             borderRadius: 5,
             marginTop: 20,
-          }} 
-          placeholder='Confirm Your Password'
+          }}
+          placeholder="Enter Password"
+        />
+        <TextInput
+          style={{
+            color: "black",
+            textAlign: "center",
+            fontSize: 20,
+            backgroundColor: "white",
+            width: "80%",
+            padding: 20,
+            borderRadius: 5,
+            marginTop: 20,
+          }}
+          placeholder="Confirm Your Password"
         />
         <TouchableOpacity
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate("Home")}
           style={{
-            backgroundColor: 'white',
+            backgroundColor: "white",
             padding: 20,
             borderRadius: 5,
-            marginTop: 20, // Adjust the margin between 
-            width: "80%"
+            marginTop: 20, // Adjust the margin between
+            width: "80%",
           }}
         >
-          <Text 
+          <Text
             style={{
-              color: 'black',
-              textAlign: 'center',
-              fontSize: 20
-            }}>Sign up</Text>
+              color: "black",
+              textAlign: "center",
+              fontSize: 20,
+            }}
+          >
+            Sign up
+          </Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -86,25 +101,24 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: 30,
     flex: 1,
-    justifyContent: 'flex-start', // Center the content vertically
-    flexDirection: 'column',
-    backgroundColor: 'black'
+    justifyContent: "flex-start", // Center the content vertically
+    flexDirection: "column",
+    backgroundColor: "black",
     //alignItems: 'center',
   },
   email: {
-    flexDirection: 'column',
+    flexDirection: "column",
     flex: 3,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     paddingVertical: 50,
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: 'black',
-
+    backgroundColor: "black",
   },
   logo: {
-    flexDirection: 'column',
+    flexDirection: "column",
     flex: 3,
   },
 });
