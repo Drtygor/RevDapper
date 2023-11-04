@@ -1,7 +1,7 @@
 import { Camera, CameraType } from 'expo-camera';
 import { useRef, useState } from 'react';
 import { Button, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import LoadingPage from './loadingPage';
+import LoadingScreen from './LoadingScreen';
 import { useFocusEffect, useIsFocused } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -11,19 +11,14 @@ import * as MediaLibrary from 'expo-media-library';
 import * as ImagePicker from 'expo-image-picker';
 const cameraButtonSize = 90
 
-export default function CameraPage() {
-
-
-
+export default function CameraScreen() {
     const [cameraPermission, requestCameraPermission] = Camera.useCameraPermissions();
     const [mediaPickerPermission, requestMediaPickerPermission] = ImagePicker.useMediaLibraryPermissions()
     let cameraRef = useRef();
     const isFocused = useIsFocused();
     const [photo, setPhoto] = useState();
 
-
     let takePic = async () => {
-
         let options = {
             quality: 1,
             base64: true,
@@ -33,15 +28,13 @@ export default function CameraPage() {
         let newPhoto = await cameraRef.current.takePictureAsync(options);
 
         setPhoto(newPhoto);
-
-
     };
 
     if (!cameraPermission) {
 
         return (
             <View style={styles.container}>
-                <LoadingPage />
+                <LoadingScreen />
             </View>
         );
     }
@@ -49,7 +42,7 @@ export default function CameraPage() {
     if (!mediaPickerPermission) {
         return (
             <View style={styles.container}>
-                <LoadingPage />
+                <LoadingScreen />
             </View>
         );
     }
@@ -58,7 +51,7 @@ export default function CameraPage() {
         requestMediaPickerPermission()
         return (
             <View style={styles.container}>
-                <LoadingPage />
+                <LoadingScreen />
             </View>
         );
     }
@@ -67,7 +60,7 @@ export default function CameraPage() {
         requestCameraPermission()
         return (
             <View style={styles.container}>
-                <LoadingPage />
+                <LoadingScreen />
             </View>
         );
     }
@@ -91,39 +84,27 @@ export default function CameraPage() {
     if (photo) {
 
         return (
-
             <View style={{ flex: 1, backgroundColor: "black" }}>
                 <StatusBar hidden />
                 <ImageBackground resizeMode="contain"
                     source={{ uri: photo.uri }}
                     style={styles.image}>
-
-
                     <View style={{
                         flex: 1, flexDirection: "row", justifyContent: "flex-start", alignItems: "flex-start",
-
                     }}>
                         <TouchableOpacity style={{ paddingTop: 20, paddingHorizontal: 20 }} onPress={() => setPhoto(undefined)}>
                             <AntDesign name="close" size={40} color="white" />
                         </TouchableOpacity>
-
                     </View>
-
                     <View style={{
                         flex: 1, flexDirection: "row", justifyContent: "flex-end", alignItems: "flex-end",
-
                     }}>
                         <TouchableOpacity style={{ paddingBottom: 20, paddingHorizontal: 20 }}>
                             <Ionicons name="send" size={40} color="white" />
                         </TouchableOpacity>
                     </View>
-
                 </ImageBackground>
             </View>
-
-
-
-
         );
     };
 

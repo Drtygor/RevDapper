@@ -3,15 +3,10 @@ import { StyleSheet, Text, View, Button, Image, TextInput, TouchableOpacity } fr
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Icon from 'react-native-vector-icons/AntDesign'
-import Logo from './assets/FinalDapperLogo.png';
-
-
-
-
+import Logo from '../assets/FinalDapperLogo.png';
 
 export const LoginScreen = ({ navigation }) => {
   return (
-
     <View style={styles.container}>
 
       <StatusBar style="light" />
@@ -37,8 +32,6 @@ export const LoginScreen = ({ navigation }) => {
           marginTop: 20,
         }} placeholder='Enter Your Email'/>
         
-
-
         <TextInput style={{
           color: 'black',
           textAlign: 'center',
@@ -50,7 +43,6 @@ export const LoginScreen = ({ navigation }) => {
           marginTop: 20,
         }} placeholder='Enter Your Password' />
         
-
         <TouchableOpacity
           onPress={() => navigation.navigate('Home')}
           style={{
@@ -68,14 +60,8 @@ export const LoginScreen = ({ navigation }) => {
           }}>Login</Text>
         </TouchableOpacity>
 
-
-
-
-
       </View>
-
-
-
+      
     </View>
   );
 

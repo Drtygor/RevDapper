@@ -1,13 +1,10 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import Logo from './assets/FinalDapperLogo.png';
+import Logo from '../assets/FinalDapperLogo.png';
 import Icon from 'react-native-vector-icons/AntDesign'
 import { StatusBar } from 'expo-status-bar';
 
-
-
-
-export const LoginPage = ({ navigation }) => {
+export const LandingScreen = ({ navigation }) => {
   return (
     //The View for the entire page
     <View style={{
@@ -27,8 +24,7 @@ export const LoginPage = ({ navigation }) => {
       <View style={styles.signup}>
         {/* Buttons */}
         <TouchableOpacity
-          onPress={() => navigation.navigate('Login Screen')}
-
+          onPress={() => navigation.navigate('Login')}
           style={{
             backgroundColor: 'white',
             padding: 20,
@@ -37,7 +33,6 @@ export const LoginPage = ({ navigation }) => {
             width: "70%",
             borderWidth: 2,
             borderColor: 'white',
-
           }}
         >
           <Text style={{
@@ -46,9 +41,8 @@ export const LoginPage = ({ navigation }) => {
             fontSize: 20
           }}>Login</Text>
         </TouchableOpacity>
-
         <TouchableOpacity
-          onPress={() => navigation.navigate('Sign Up Screen')}
+          onPress={() => navigation.navigate('Signup')}
           style={{
             backgroundColor: 'white',
             padding: 20,
@@ -65,39 +59,21 @@ export const LoginPage = ({ navigation }) => {
         </TouchableOpacity>
       </View>
       {/*Icon View*/}
-
       <View style={styles.appSignUp}>
-
-
         <Icon name={"apple1"} size={60} color={"white"}
-          onPress={() => navigation.navigate('Sign Up Screen')} />
-
-
-
+          onPress={() => navigation.navigate('Signup')} />
         <Icon name={"google"} size={60} color={"white"}
-          onPress={() => navigation.navigate('Sign Up Screen')} />
-
-
+          onPress={() => navigation.navigate('Signup')} />
         <Icon name={"instagram"} size={60} color={"white"}
-          onPress={() => navigation.navigate('Sign Up Screen')} />
-
-
-
+          onPress={() => navigation.navigate('Signup')} />
       </View>
-
-
-
     </View>
-
   );
-
 };
-
 
 //Styles
 const styles = StyleSheet.create({
   container: {
-
     flex: 1,
     //alignItems: 'center',
   },
@@ -118,7 +94,6 @@ const styles = StyleSheet.create({
   logo: {
     flexDirection: 'column',
     flex: 3,
-
   },
 
   appSignUp: {
@@ -128,12 +103,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 60,
     paddingVertical: 0
-
   }
-
-
-
-
 });
 
-export default LoginPage;
+export default LandingScreen;
