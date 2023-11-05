@@ -86,7 +86,7 @@ export default function CameraScreen() {
   if (photo) {
     return (
       <View style={{ flex: 1, backgroundColor: "black" }}>
-        <StatusBar hidden />
+        <StatusBar hidden={true} />
         <ImageBackground
           resizeMode="contain"
           source={{ uri: photo.uri }}
@@ -107,6 +107,7 @@ export default function CameraScreen() {
               <AntDesign name="close" size={40} color="white" />
             </TouchableOpacity>
           </View>
+
           <View
             style={{
               flex: 1,
@@ -128,7 +129,7 @@ export default function CameraScreen() {
 
   return (
     <View style={styles.container}>
-      <StatusBar hidden />
+      {isFocused && <StatusBar hidden={true} />}
       {isFocused && (
         <Camera
           style={styles.camera}
