@@ -21,7 +21,7 @@ export const LoginScreen = ({ navigation }) => {
         name={"arrowleft"}
         size={60}
         color={"white"}
-        onPress={() => navigation.navigate("Login")}
+        onPress={() => navigation.navigate("Landing")}
       />
 
       <View style={styles.logo}>
