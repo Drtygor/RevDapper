@@ -10,8 +10,6 @@ import {
   ScrollView,
   KeyboardAvoidingView,
 } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Icon from "react-native-vector-icons/AntDesign";
 import Logo from "../assets/FinalDapperLogo.png";
 import { useState } from "react";

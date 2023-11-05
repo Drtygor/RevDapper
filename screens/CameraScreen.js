@@ -1,20 +1,18 @@
 import { Camera, CameraType } from "expo-camera";
 import { useRef, useState } from "react";
 import {
-  Button,
   ImageBackground,
   StyleSheet,
-  Text,
   TouchableOpacity,
   View,
 } from "react-native";
 import LoadingScreen from "./LoadingScreen";
-import { useFocusEffect, useIsFocused } from "@react-navigation/native";
+import { useIsFocused } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { StatusBar } from "expo-status-bar";
-import * as MediaLibrary from "expo-media-library";
+
 import * as ImagePicker from "expo-image-picker";
 const cameraButtonSize = 90;
 

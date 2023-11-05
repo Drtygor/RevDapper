@@ -1,14 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  FlatList,
-  Dimensions,
-} from "react-native";
-import LoadingScreen from "./LoadingScreen";
-import { NavigationContainer } from "@react-navigation/native";
+import { StyleSheet, Text, View, Image, FlatList } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
