@@ -13,9 +13,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Icon from "react-native-vector-icons/AntDesign";
 import Logo from "../assets/FinalDapperLogo.png";
-
 import { useState } from "react";
-
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 
@@ -27,6 +25,8 @@ export const SignupScreen = ({ navigation }) => {
   const [error, setError] = useState("");
 
   const onSignUp = () => {
+    setError("");
+
     if (
       email === "" ||
       password === "" ||
@@ -158,6 +158,7 @@ export const SignupScreen = ({ navigation }) => {
                   color: "red",
                   textAlign: "center",
                   fontSize: 20,
+                  paddingTop: 10,
                 }}
               >
                 {error}
