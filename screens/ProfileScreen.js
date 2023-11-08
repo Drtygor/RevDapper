@@ -10,7 +10,7 @@ const handleLogout = (navigation) => {
 
 //Handles the setting navigation
 const handleSetting = (navigation) => {
-    navigation.navigate();
+    navigation.navigate('Settings');
 }
 
 const Profile = ({navigation}) => {

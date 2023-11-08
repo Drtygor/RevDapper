@@ -5,7 +5,9 @@ const Settings = ({Navigation}) => {
     return (
         <View style= {styles.container}>
             <StatusBar style="dark" />
-            
+            <View>
+                <Text style = {styles.textFormat}> My plan is to have upload pfp button, change username and change password </Text>
+            </View>
         </View>
 
     );
@@ -17,7 +19,14 @@ const styles = StyleSheet.create ({
         justifyContent : 'center',
         alignItems : 'center',
         backgroundColor : 'black'
-    }
+    },
+
+    textFormat : {
+        fontSize : 25,
+        textAlign : 'center',
+        fontWeight : 'normal',
+        color : 'white',
+    },
 
 });
-export default MediaTrackSettings
+export default Settings
