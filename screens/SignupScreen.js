@@ -37,7 +37,6 @@ export const SignupScreen = ({ navigation }) => {
       setError("Passwords do not match");
       return;
     }
-    setError("Passwords do not match");
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
