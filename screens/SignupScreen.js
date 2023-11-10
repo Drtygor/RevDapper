@@ -15,6 +15,8 @@ import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 
+
+
 export const SignupScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -194,4 +196,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SignupScreen;
+export default SignupScreen; 
+
