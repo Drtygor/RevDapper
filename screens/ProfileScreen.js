@@ -36,7 +36,7 @@ const Profile = ({navigation}) => {
 
             {/*The Dummy Username */}
             <View style = {styles.usernameContainer}>
-                <Text style = {styles.textFormat}>username</Text>
+                <Text style = {styles.textFormat}>Username</Text>
             </View>
 
             {/*Logout Button*/}
