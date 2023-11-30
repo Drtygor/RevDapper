@@ -13,8 +13,8 @@ const handleSetting = (navigation) => {
   navigation.navigate("Settings");
 };
 
-//Handles the favorites navigation
-const handleFavorites = (navigation) => {
+//Handles the favorite navigation
+const handleFavorite = (navigation) => {
   navigation.navigate("Favorites");
 };
 
@@ -49,7 +49,7 @@ const Profile = ({ navigation }) => {
       {/*Favorites Page Button*/}
       <TouchableOpacity
         style={styles.settingButtons}
-        onPress={() => handleFavorites(navigation)}
+        onPress={() => handleFavorite(navigation)}
       >
         <Text style={styles.textFormat}>Favorites</Text>
       </TouchableOpacity>

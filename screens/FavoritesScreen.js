@@ -2,9 +2,10 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image, FlatList } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+const Stack = createNativeStackNavigator();
 const numColumns = 3;
 
-const MyFlatList = (nagivation) => {
+const MyFlatList = ({ navigation }) => {
   const recentImages = [
     {
       id: "1",
@@ -63,11 +64,11 @@ const appStyles = StyleSheet.create({
   },
 });
 
-const FavoritesScreen = (navigation) => {
+const Favorites = ({ navigation }) => {
   return (
     <View style={styles.appContainer}>
       <StatusBar style="light" />
-      <MyFlatList nagivation={nagivation} />
+      <MyFlatList navigation={navigation} />
     </View>
   );
 };
@@ -81,4 +82,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FavoritesScreen;
+export default Favorites;
