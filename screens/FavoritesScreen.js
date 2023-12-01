@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, FlatList } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
-const numColumns = 3;
+const numColumns = 2;
 
 const MyFlatList = ({ navigation }) => {
   const recentImages = [
