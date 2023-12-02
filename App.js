@@ -7,6 +7,7 @@ import SignupScreen from "./screens/SignupScreen";
 import HomePage from "./screens/HomeScreen";
 import SettingsScreen from "./screens/SettingsScreen";
 import FavoritesScreen from "./screens/FavoritesScreen";
+import ResultsScreen from "./screens/ResultsScreen";
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
         <Stack.Screen name="Home" component={HomePage} />
         <Stack.Screen name="Settings" component={SettingsScreen} />
         <Stack.Screen name="Favorites" component={FavoritesScreen} />
+        <Stack.Screen name="Results" component={ResultsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

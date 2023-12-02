@@ -16,7 +16,7 @@ import { StatusBar } from "expo-status-bar";
 import * as ImagePicker from "expo-image-picker";
 const cameraButtonSize = 90;
 
-export default function CameraScreen() {
+export default function CameraScreen({ navigation }) {
   const [cameraPermission, requestCameraPermission] =
     Camera.useCameraPermissions();
   const [mediaPickerPermission, requestMediaPickerPermission] =
@@ -25,6 +25,10 @@ export default function CameraScreen() {
   const isFocused = useIsFocused();
   const [photo, setPhoto] = useState();
 
+  let uploadPic = () => {
+    console.log(photo.base64);
+    navigation.navigate("Results");
+  };
   let takePic = async () => {
     let options = {
       quality: 1,
@@ -118,6 +122,7 @@ export default function CameraScreen() {
           >
             <TouchableOpacity
               style={{ paddingBottom: 20, paddingHorizontal: 20 }}
+              onPress={uploadPic}
             >
               <Ionicons name="send" size={40} color="white" />
             </TouchableOpacity>
