@@ -26,8 +26,8 @@ export default function CameraScreen({ navigation }) {
   const [photo, setPhoto] = useState();
 
   let uploadPic = () => {
-    console.log(photo.base64);
-    navigation.navigate("Results");
+    let b64 = photo.base64;
+    navigation.navigate("Results", { base64: b64 });
   };
   let takePic = async () => {
     let options = {
